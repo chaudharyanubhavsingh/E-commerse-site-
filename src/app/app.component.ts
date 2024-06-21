@@ -13,7 +13,8 @@ export class AppComponent implements OnInit {
 
   cartItems: any[] = [];
   hideContent: boolean = false;
-  username = localStorage.getItem('username');
+  username = localStorage.getItem('username')? localStorage.getItem('username') : 'Guest';
+
   userId: number | null = null;
 
   constructor(private router: Router, private renderer: Renderer2, private cartService: CartService) { }
