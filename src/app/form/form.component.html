@@ -1,0 +1,77 @@
+<div id="Contactme" data-w-id="2f1cf20d-1a73-d2b4-9f4e-5a1154ae2110" style="opacity: 1; background-color: #c9adc6;" class="content-section thistle-medium">
+  <div class="content-wrapper w-container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <div class="flex-center" style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+
+      <div data-w-id="9776f145-0a90-423b-9a45-1e9f8b4cc5c5" style="opacity: 1; flex: 1; margin: 10px; max-width: 300px;">
+        <div>
+          <div class="mini-title-white" style="margin: 10px;">email</div>
+          <a href="mailto:anubhavchaudhary674@gmail.com" class="contact-link">anubhavchaudhary674&#64;gmail.com</a>
+        </div>
+      </div>
+
+      <div class="top-border _20" style="margin: 10px; flex: 1; max-width: 300px;">
+        <div class="mini-title-white">phone</div>
+        <div style="margin: 3px;"><a href="tel:+33434543234" class="contact-link">33434543234</a></div>
+      </div>
+
+      <div class="top-border _20" style="margin: 10px; flex: 1; max-width: 300px;">
+        <div class="mini-title-white">address</div>
+        <div>
+          <div class="text-small white">UPES , Dehradun , India</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div data-w-id="fdfd27bb-6223-123c-a110-d50f0d53e46b" style="opacity: 1; padding: 20px;" class="form-block">
+      <div style="text-align: center; margin-bottom: 2em;">
+        <div class="text-small grey"><b>Drop us your message, and we'll get back to you as soon as possible.</b></div>
+      </div>
+
+      <div style="width: 100%; max-width: 800px; margin: 0 auto;">
+        <form style="background-color: rgba(255, 255, 255, 0.025); padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);">
+          <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start;">
+
+            <div style="width: 100%; margin-bottom: 15px;">
+              <label style="display: block; margin-bottom: 5px; color: #ccc;">Name:</label>
+              <input type="text" [(ngModel)]="formData.Name" name="Name" placeholder="Enter your name"
+                style="width: 100%; padding: 10px; border: none; border-bottom: 1px solid #ccc; background-color: rgba(240, 240, 240, 0.8); border-radius: 5px; transition: border-color 0.3s ease-in-out;">
+            </div>
+
+            <div style="width: 100%; margin-bottom: 15px;">
+              <label style="display: block; margin-bottom: 5px; color: #ccc;">Company:</label>
+              <input type="text" [(ngModel)]="formData.Company" name="Company" placeholder="Enter your company"
+                style="width: 100%; padding: 10px; border: none; border-bottom: 1px solid #ccc; background-color: rgba(240, 240, 240, 0.8); border-radius: 5px; transition: border-color 0.3s ease-in-out;">
+            </div>
+
+            <div style="width: 100%; margin-bottom: 15px;">
+              <label style="display: block; margin-bottom: 5px; color: #ccc;">Phone:</label>
+              <input type="text" [(ngModel)]="formData.Phone" name="Phone" placeholder="Enter your phone number"
+                style="width: 100%; padding: 10px; border: none; border-bottom: 1px solid #ccc; background-color: rgba(240, 240, 240, 0.8); border-radius: 5px; transition: border-color 0.3s ease-in-out;">
+            </div>
+
+            <div style="width: 100%; margin-bottom: 15px;">
+              <label style="display: block; margin-bottom: 5px; color: #ccc;">Email:</label>
+              <input type="email" [(ngModel)]="formData.Email" name="Email" placeholder="Enter your email"
+                style="width: 100%; padding: 10px; border: none; border-bottom: 1px solid #ccc; background-color: rgba(240, 240, 240, 0.8); border-radius: 5px; transition: border-color 0.3s ease-in-out;">
+            </div>
+
+            <div style="width: 100%; margin-bottom: 15px;">
+              <label style="display: block; margin-bottom: 5px; color: #ccc;">Message:</label>
+              <textarea name="Message" [(ngModel)]="formData.Message" placeholder="Enter your message"
+                style="width: 100%; padding: 10px; border: none; border-bottom: 1px solid #ccc; background-color: rgba(240, 240, 240, 0.8); border-radius: 5px; transition: border-color 0.3s ease-in-out;"></textarea>
+            </div>
+
+          </div>
+
+          <div style="text-align: center;">
+            <button type="button" (click)="submitForm()"
+              style="background-color: #ff007371; color: #fff; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s ease-in-out;">Let's
+              talk</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

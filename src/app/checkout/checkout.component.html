@@ -1,0 +1,168 @@
+<div class="inner-hero">
+    <div class="content-wrapper w-container">
+      <h1 class="h1-white">Checkout<br /></h1>
+    </div>
+  </div>
+  <div class="content-section gray">
+    <div class="content-wrapper w-container">
+      <div
+        data-node-type="commerce-checkout-form-container"
+        
+        class="w-commerce-commercecheckoutformcontainer checkout-form"
+      >
+        <div class="contact-info">
+          <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
+            <div class="fieldset">
+              <div class="w-commerce-commercecheckoutblockheader block-content">
+                <h4 class="heading-4">Customer Info</h4>
+                <div class="required">* Required</div>
+              </div>
+              <fieldset class="w-commerce-commercecheckoutblockcontent block-content">
+                <label for="email" class="w-commerce-commercecheckoutlabel field-label">Email *</label>
+                <input formControlName="email" class="w-commerce-commercecheckoutemailinput input-field" type="email" required />
+              </fieldset>
+            </div>
+  
+            <div class="fieldset">
+              <div class="w-commerce-commercecheckoutblockheader block-header">
+                <h4 class="heading-4">Shipping Address</h4>
+                <div class="required">* Required</div>
+              </div>
+              <fieldset class="w-commerce-commercecheckoutblockcontent block-content">
+                <label for="fullName" class="w-commerce-commercecheckoutlabel field-label">Full Name *</label>
+                <input formControlName="fullName" class="w-commerce-commercecheckoutshippingfullname input-field" type="text" required />
+                <label for="streetAddress" class="w-commerce-commercecheckoutlabel field-label">Street Address *</label>
+                <input formControlName="streetAddress" class="w-commerce-commercecheckoutshippingstreetaddress input-field" type="text" required />
+               
+                <div class="w-commerce-commercecheckoutrow flex">
+                  <div class="w-commerce-commercecheckoutcolumn">
+                    <label for="city" class="w-commerce-commercecheckoutlabel field-label">City *</label>
+                    <input formControlName="city" class="w-commerce-commercecheckoutshippingcity input-field" type="text" required />
+                  </div>
+                  <div class="w-commerce-commercecheckoutcolumn">
+                    <label for="state" class="w-commerce-commercecheckoutlabel field-label">State/Province</label>
+                    <input formControlName="state" class="w-commerce-commercecheckoutshippingstateprovince input-field" type="text" />
+                  </div>
+                  <div class="w-commerce-commercecheckoutcolumn">
+                    <label for="zipCode" class="w-commerce-commercecheckoutlabel field-label">Zip/Postal Code *</label>
+                    <input formControlName="zipCode" class="w-commerce-commercecheckoutshippingzippostalcode input-field" type="text" required />
+                  </div>
+                </div>
+                <label for="country" class="w-commerce-commercecheckoutlabel field-label">Country *</label>
+                <select formControlName="country" class="w-commerce-commercecheckoutshippingcountryselector input-field">
+                  <option value="IN" selected>India</option>
+                </select>
+                <div
+                style="margin-top:10px ;"
+                data-node-type="commerce-checkout-shipping-methods-list"
+                class="w-commerce-commercecheckoutshippingmethodslist shipping-method-li"  >
+                <label class="w-commerce-commercecheckoutshippingmethoditem shipping-method" ><input
+                    required=""
+                    type="radio"
+                    name="shipping-method-choice"
+                  />
+                  <div
+                    class="w-commerce-commercecheckoutshippingmethoddescriptionblock"
+                  >
+                  Cash
+                    <div
+                    class="w-commerce-commerceboldtextblock heading-4 w-dyn-bind-empty"
+                    ></div>
+                    <div
+                      class="small-text-2 w-dyn-bind-empty"
+                    ></div>
+                  </div>
+                  <div
+                    class="price"
+                  >
+                    $0.00
+                  </div></label>
+              </div>
+              </fieldset>
+            </div>
+            
+            <div style="display: flex; ">
+              <button style="padding-top:0px ;" type="submit" class="w-commerce-commercecheckoutplaceorderbutton submit-button-4">Place Order</button>
+
+            </div>
+                     </form>
+          <div
+            data-wf-paypal-button='{"layout":"horizontal","color":"black","shape":"rect","label":"pay","tagline":false,"note":false}'
+            class="paypal"
+          ></div>
+          <div
+            data-node-type="commerce-checkout-error-state"
+            style="display: none"
+            class="w-commerce-commercecheckouterrorstate"
+          >
+            <div
+              aria-live="polite"
+              class="w-checkout-error-msg"
+              
+            >
+              There was an error processing your customer info. Please try
+              again, or contact us if you continue to have problems.
+            </div>
+          </div>
+        </div>
+        <div class="ordered-items">
+          <div class="w-commerce-commercecheckoutorderitemswrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4 class="heading-4">Items in Order</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <script
+                type="text/x-wf-template"
+                id="wf-template-5f809030-131e-332e-cab2-f6836e5ef3a7"
+              >
+               </script>
+              <div
+                role="list"
+                class="w-commerce-commercecheckoutorderitemslist"
+               >
+                <div
+                  role="listitem"
+                  class="w-commerce-commercecheckoutorderitem" style="    margin-bottom: 20px;
+                  display: flex;
+                  flex-direction: column;
+                  flex-wrap: wrap;
+                  align-content: center;
+                  justify-content: center;
+                  align-items: center;"
+                                >
+                <li  style="display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;" *ngFor="let item of cartItems">
+            
+                <div style="margin-right: 30px;"> {{ item.orderName }} </div>
+
+                <div class="small-text-2" style="margin-right: 30px;">Quantity : {{ item.orderQuantity}}</div>
+                  <div class="price"  style="margin-right: 30px;"> {{ item.price}} </div>
+                </li>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="w-commerce-commercecheckoutordersummarywrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4 class="heading-4">Order Summary</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <div
+                class="w-commerce-commercecheckoutsummarylineitem line-item-2"
+              >
+                <div class="field-label">Total</div>
+                <div
+                >₹ 
+                {{ totalCost }}
+                INR
+              </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>

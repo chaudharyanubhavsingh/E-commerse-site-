@@ -1,0 +1,44 @@
+.toolbar-viewAs {
+    display: flex;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  .toolbar-icon {
+    cursor: pointer;
+    margin-right: 10px;
+    display: inline-block;
+    width: 40px; /* Adjust as needed */
+    height: 40px; /* Adjust as needed */
+    text-align: center;
+  }
+  
+  .toolbar-icon img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .toolbar-icon.active {
+    border-bottom: 2px solid rgb(0, 0, 0); /* Example border style for active state */
+    /* Example border radius for active state */
+  }
+  
+  .w-dyn-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .collection-item {
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .products-details {
+    padding: 10px;
+    border: 1px solid #ccc; /* Example border style */
+    border-radius: 5px; /* Example border radius */
+    margin-top: 10px; /* Example margin */
+    background-color: #f9f9f9; /* Example background color */
+  }
+  

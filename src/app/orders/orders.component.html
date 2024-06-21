@@ -1,0 +1,31 @@
+<div class="inner-hero">
+    <div class="content-wrapper w-container">
+      <h1 class="h1-white">Your Orders<br /></h1>
+    </div>
+  </div>
+  <div class="content-section gray">
+    <div class="content-wrapper w-container">
+      <div class="w-commerce-commerceorderconfirmationcontainer order-confirmation-container">
+        <div class="w-commerce-commerceorderconfirmation">
+          <div class="w-commerce-commerceorderconfirmationheaderwrapper">
+
+            <div class="w-commerce-commercecheckoutorderitemswrapper">
+              <div class="w-commerce-commercecheckoutsummaryblockheader">
+                <h4>Orders History</h4>
+              </div>
+              <fieldset class="w-commerce-commercecheckoutblockcontent">
+                <div  role="list" class="w-commerce-commercecheckoutorderitemslist">
+                  <div style="display: flex;
+                  justify-content: space-around;" role="listitem" class="w-commerce-commercecheckoutorderitem" *ngFor="let item of orderItems">
+                    <div style="margin-right: 30px;">{{ item.orderName }}</div>
+                    <div style="margin-right: 30px;" class="small-text-2">Quantity: {{ item.orderQuantity }}</div>
+                    <div style="margin-right: 30px;" class="price">₹ {{ item.orderPrice }} INR</div>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

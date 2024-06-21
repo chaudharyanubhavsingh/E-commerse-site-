@@ -1,0 +1,74 @@
+<div class="w-layout-vflex" style="padding: 20px;">
+  <div class="w-form" style="width: 100%;" *ngIf="!isLoggedIn; else loggedInTemplate">
+    <form id="email-form">
+      <label for="Email">Email Address</label>
+      <input
+        #formInput
+        (focus)="addFocus(formInput)"
+        (blur)="removeFocus(formInput)"
+        class="w-input"
+        maxlength="256"
+        name="Email"
+        data-name="Email"
+        placeholder="Email"
+        type="text"
+        id="Email"
+      />
+      <label for="Password">Password</label>
+      <input
+        #passwordInput
+        (focus)="addFocus(passwordInput)"
+        (blur)="removeFocus(passwordInput)"
+        class="w-input"
+        maxlength="256"
+        name="Password"
+        data-name="Password"
+        placeholder="Password"
+        type="password"
+        id="Password"
+        required=""
+      />
+      <button
+      
+        style="margin-left: 20px ;margin-bottom: 30px;"
+        (click)="login(formInput.value, passwordInput.value)"
+        class="submit-button-7 w-button"
+      >
+        Login
+      </button>
+    </form>
+    <div class="w-form-done">
+      <div>Thank you! Your submission has been received!</div>
+    </div>
+    <div class="w-form-fail">
+      <div>Oops! Something went wrong while submitting the form.</div>
+    </div>
+    <div
+      *ngIf="error"
+      style="
+        display: flex;
+        align-items: center;
+        background-color: #ffebee;
+        border: 1px solid #c62828;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+      "
+    >
+      <span style="color: #c62828; font-size: 24px; margin-right: 10px;">!</span>
+      <span style="color: #c62828; font-size: 16px;">{{ error }}</span>
+    </div>
+    <div class="w-layout-hflex flex-block-6 account">
+      <p class="paragraph-2">Don&#x27;t Have account?</p>
+    </div>
+    <a routerLink="/signup" class="button-2 w-button">Create Account</a>
+  </div>
+  <ng-template #loggedInTemplate>
+    <div style="display: flex; align-items: center; justify-content: space-between;    flex-direction: column;">
+      <div style="margin-bottom: 30px;">Hey, {{username}}</div>
+      <button class="submit-button-7 w-button" (click)="logout()" style="margin-left: 10px;">
+        Logout
+      </button>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,399 @@
+<div>
+     
+    <div>
+ 
+        <!-- <div *ngIf="!hideContent"
+        data-w-id="4cf305c7-ac13-8aba-5d11-2ced180d467b"
+        style="display: flex; opacity: 1"
+        class="w-layout-blockcontainer container w-container"
+      >
+        <div class="div-block-93">
+          <div>
+            <div class="div-block-94">
+              <img
+                src="https://cdn.prod.website-files.com/64acfd314111bd7a3348ca67/64acfd314111bd7a3348caa0_44f0ffa7f592917f963fda8b376aa547.png"
+                loading="lazy"
+                width="121"
+                alt="image"
+                class="image-69"
+              />
+            </div>
+          </div>
+          <div
+            class="lottie-animation"
+            data-w-id="3be28484-ef33-8079-2520-25c02222d0a2"
+            data-animation-type="lottie"
+            data-src="https://cdn.prod.website-files.com/64acfd314111bd7a3348ca67/64bab8b2d155f0763aa1af1f_animation_lkctou1s.json"
+            data-loop="1"
+            data-direction="1"
+            data-autoplay="1"
+            data-is-ix2-target="0"
+            data-renderer="svg"
+            data-default-duration="1.5"
+            data-duration="0"
+          ></div>
+        </div>
+      </div> -->
+      <div
+      *ngIf="!hideContent"
+        data-collapse="medium"
+        data-animation="default"
+        data-duration="400"
+        id="Top"
+        data-easing="ease"
+        data-easing2="ease"
+        role="banner"
+        class="navbar-2 w-nav"
+      >
+        <div class="content-wrapper w-container">
+          <a href="/" aria-current="page" class="brand w-nav-brand w--current"
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/65f2077e5e03493160fc7178_logo.png"
+              width="69"
+              alt=""
+          /></a>
+          <nav role="navigation" class="nav-menu-2 w-nav-menu">
+            <a
+            (click)="togglePanel(accountPanel)"
+              href="#"
+              data-w-id="999f9e2a-a753-7f8d-0faf-1480b0d7950d"
+              class="nav-link2 account w-nav-link"
+              >Sign In / Create new account</a
+            ><a
+              (click)="togglePanel(cartPanel)"
+              href="#"
+              data-w-id="999f9e2a-a753-7f8d-0faf-1480b0d79513"
+              class="nav-link2 cart w-nav-link"
+              >Shopping Cart</a
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/65f202b72b932a162dcf0282_cart.png"
+              loading="lazy"
+              alt=""
+              class="image-70"
+            />
+          </nav>
+        </div>
+      </div>
+      <div
+      *ngIf="!hideContent"
+        data-animation="default"
+        data-collapse="medium"
+        data-duration="400"
+        data-easing="ease"
+        data-easing2="ease"
+        role="banner"
+        class="topbar w-nav"
+      >
+        <img
+          src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/65f2077e5e03493160fc7178_logo.png"
+          loading="lazy"
+          width="60"
+          alt="image"
+          class="image-71"
+        />
+        <nav role="navigation" class="nav-menu-3 w-nav-menu">
+          <a routerLink="/" class="nav-link-4 w-nav-link">Home</a
+          ><a routerLink="/clothes" class="nav-link-3 w-nav-link">Collections</a
+          ><a routerLink="/orders" class="nav-link-2 w-nav-link">Orders</a>
+        </nav>
+        <div class="container-3 w-container">
+          <img
+            (click)="togglePanel(cartPanel)"
+            src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon.png"
+            loading="lazy"
+            width="256"
+            alt="cart icon"
+            srcset="
+              https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon-p-500.png 500w,
+              https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon.png       512w
+            "
+            sizes="(max-width: 767px) 100vw, 45px"
+            class="image-84"
+          />
+          <div data-hover="true" data-delay="0" class="w-dropdown">
+            <div class="w-dropdown-toggle" >
+              <div>
+                <img
+                  src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708527db95ca0fa025564c_account.png"
+                  loading="lazy"
+                  width="237"
+                  alt="account icon"
+                  class="image-74"
+                />
+              </div>
+            </div>
+            <nav class="w-dropdown-list">
+              <a href="#" class="dropdown-link w-dropdown-link">Hey, {{username}}</a>
+              <a
+                (click)="togglePanel(accountPanel)"
+                href="#"
+                class="dropdown-link signin w-dropdown-link"
+                >Sign In</a
+              >
+            </nav>
+          </div>
+        </div>
+        
+      </div>
+ <router-outlet></router-outlet>
+ <app-creator-badge></app-creator-badge>
+     <div class="panel-container">
+      <div #accountPanel id="panel account" style="display: none" class="w-layout-vflex flex-block-4 account">
+        <div class="w-layout-blockcontainer container-4 account w-container">
+          <div class="w-layout-hflex flex-block-5 account"> 
+            <h1 class="heading-7 account">Sign In</h1>
+            <img
+              (click)="closePanel(accountPanel)"
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png"
+              loading="lazy"
+              width="415"
+              data-w-id="6457a27e-a5e3-98e8-428f-3698929b6d7e"
+              alt=""
+              srcset="
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1)-p-500.png 500w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png       830w
+              "
+              sizes="100vw"
+              class="image-82 account"
+            />
+          </div>
+          <app-login></app-login>
+          
+          </div>
+      </div>
+      <div #cartPanel id="panel cart" class="w-layout-vflex flex-block-4 cart">
+        <div class="w-layout-blockcontainer container-4 cart w-container">
+          <div class="w-layout-hflex flex-block-5 cart">
+            <h1 class="heading-7">Cart</h1>
+            <img
+              (click)="closePanel(cartPanel)" 
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png"
+              loading="lazy"
+              width="415"
+              data-w-id="5d478d03-9438-fe7b-01dd-f4ec82649860"
+              alt=""
+              srcset="
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1)-p-500.png 500w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png       830w
+              "
+              sizes="100vw"
+              class="image-83"
+            />
+          </div>
+          <div class="w-layout-vflex cart list">
+            <div class="w-layout-hflex flex-block-7">
+           
+            </div>
+            <div class="w-layout-vflex cart list">
+              <div *ngIf="username">
+                <h2>Welcome, {{ username }}</h2>
+                <div>
+                  <h3>Your Cart</h3>
+                  <ul>
+                    <li *ngFor="let item of cartItems">
+                      {{ item.orderName }} - Quantity: {{ item.orderQuantity}}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="footer-section">
+        <div data-w-id="7bdace99-34e0-3291-e973-c20f6a696aa7" class="perks">
+          <div class="content-wrapper w-container">
+            <div class="flex-center">
+              <div data-w-id="7bdace99-34e0-3291-e973-c20f6a696aaa" class="perk">
+                <div class="perk-icon _1"></div>
+                <div class="flex-vertical">
+                  <div class="text-title">Safe shopping</div>
+                  <div><p class="text-white">Buy with confidence</p></div>
+                </div>
+              </div>
+              <div data-w-id="7bdace99-34e0-3291-e973-c20f6a696ab2" class="perk">
+                <div class="perk-icon _2"></div>
+                <div class="flex-vertical">
+                  <div class="text-title">Fast shipping</div>
+                  <div><p class="text-white">Get your product fast</p></div>
+                </div>
+              </div>
+              <div
+                data-w-id="7bdace99-34e0-3291-e973-c20f6a696aba"
+                class="perk tablet-none"
+              >
+                <div class="perk-icon _3"></div>
+                <div class="flex-vertical">
+                  <div class="text-title">Satisfaction guarantee</div>
+                  <div><p class="text-white">Or get your money back</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <div class="content-wrapper w-container">
+            <div class="flex-space">
+              <div class="_90-column">
+                <a
+                  href="/"
+                  aria-current="page"
+                  class="footer-brand w-inline-block w--current"
+                  ><img
+                    src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/65f2077e5e03493160fc7178_logo.png"
+                    width="84"
+                    alt=""
+                /></a>
+                <div class="footer-links">
+                  <a routerLink="/" aria-current="page" class="footer-link w--current"
+                    >Home</a
+                  ><a routerLink="/product" class="footer-link">Collections</a
+                  ><a routerLink="/order" aria-current="page" class="footer-link w--current"
+                    >Your orders</a
+                  >
+                </div>
+              </div>
+              <div class="social-icons">
+                <a
+                  href="#"
+                  target="_blank"
+                  class="social-icon facebook w-inline-block"
+                ></a
+                ><a
+                  href="#"
+                  target="_blank"
+                  class="social-icon instagram w-inline-block"
+                ></a
+                ><a
+                  href="#"
+                  target="_blank"
+                  class="social-icon twitter w-inline-block"
+                ></a>
+              </div>
+            </div>
+            <div class="footer-notice"><div class="footer-notice-box"></div></div>
+          </div>
+        </div>
+      </div>
+      <div
+      id="myDiv"
+        data-w-id="249354e2-55a2-5782-c284-082ae5320690"
+        style="
+       display: none;
+      -webkit-transform: translate3d(-161px, -44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(180deg) rotateZ(0) skew(0, 0);
+      -moz-transform: translate3d(-161px, -44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(180deg) rotateZ(0) skew(0, 0);
+      -ms-transform: translate3d(-161px, -44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(180deg) rotateZ(0) skew(0, 0);
+      transform: translate3d(-161px, -44px, 0) scale3d(1, 1, 1) rotateX(0) rotateY(180deg) rotateZ(0) skew(0, 0);
+    "
+        class="h24ekn31-3"
+      >
+        <div class="pd59xji0-3">
+          <div class="tqxu2lfq-3">End-of-season clearance:</div>
+          <a href="#" class="mvl3vj7y-3"
+            ><span class="nphyoyvm-3"
+              ><span class="h37pu3co-3">Up to 80% off!</span>
+              <div class="opd3l3lg-3 w-embed">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewbox="0 0 448 512"
+                  class="gtbxchic"
+                >
+                  <path
+                    d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                    class="r3rvhxyr"
+                  ></path>
+                </svg></div></span
+            ><span class="i74qqr3l-3">Limited time only</span></a
+          >
+          <div class="hutyd7mm-3">Up to 80% off!</div>
+        </div>
+        <img
+          src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png"
+          loading="lazy"
+          width="415"
+          data-w-id="0e1b12b1-baa0-247a-94e6-77cf4351e2f8"
+          alt="image"
+          srcset="
+            https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1)-p-500.png 500w,
+            https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66706cabdb52ac92b2883b7e_pngwing.com%20(1).png       830w
+          "
+          sizes="100vw"
+          class="image-72"
+           (click)="toggleDisplay()"
+        />
+      </div>
+      <section class="section-2">
+        <div class="w-layout-hflex flex-block-3">
+          <a routerLink="/" class="w-inline-block"
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign.jpg"
+              loading="lazy"
+              width="2500"
+              sizes="(max-width: 767px) 45px, 100vw"
+              alt="image"
+              srcset="
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-500.jpg   500w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-800.jpg   800w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-1080.jpg 1080w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-1600.jpg 1600w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-2000.jpg 2000w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-2600.jpg 2600w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign-p-3200.jpg 3200w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/66708098e5cc358e52d0d2e3_vector-home-icon-symbol-sign.jpg        5000w
+              "
+              class="image-76"
+            />
+            <div class="text-block-4">Home</div></a
+          ><a routerLink="/clothes" class="w-inline-block"
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/6670807552fbde9390231685_11671543.png"
+              loading="lazy"
+              width="256"
+              alt="image"
+              class="image-77" 
+            />
+            <div class="text-block-4 _3">Collections</div></a
+          ><a
+            data-w-id="e8dd8426-edc4-dda5-d9b8-f63480c74294"
+            routerLink="/orders"
+            class="w-inline-block"
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082fbf1b20929bdadcf11_R.png"
+              loading="lazy"
+              width="237"
+              sizes="(max-width: 767px) 45px, 100vw"
+              alt="image"
+              srcset="
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082fbf1b20929bdadcf11_R-p-500.png 500w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082fbf1b20929bdadcf11_R.png       980w
+              "
+              class="image-78"
+            />
+            <div class="text-block-4 _2">Orders</div></a
+          ><a
+           (click)="togglePanel(cartPanel)"
+            data-w-id="c0ba2b6c-b2ac-8a4e-f52e-4f3dab10714f"
+            href="#"
+            class="w-inline-block"
+            ><img
+              src="https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon.png"
+              loading="lazy"
+              width="256"
+              sizes="(max-width: 767px) 45px, 100vw"
+              alt="image"
+              srcset="
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon-p-500.png 500w,
+                https://cdn.prod.website-files.com/65f202b72b932a162dcf0181/667082860b589737327f3282_2703085_bag_cart_ecommerce_shop_icon.png       512w
+              "
+              class="image-79"
+            />
+            <div class="text-block-4">Cart</div></a
+          >
+        </div>
+      </section>
+     
+    </div>
+
+</div>
+
+         

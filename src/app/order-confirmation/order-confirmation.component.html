@@ -1,0 +1,87 @@
+<div class="inner-hero">
+  <div class="content-wrapper w-container">
+    <h1 class="h1-white">Order Confirmed!<br /></h1>
+  </div>
+</div>
+<div class="content-section gray">
+  <div class="content-wrapper w-container">
+    <div class="w-commerce-commerceorderconfirmationcontainer order-confirmation-container">
+      <div class="w-commerce-commerceorderconfirmation">
+        <div class="w-commerce-commerceorderconfirmationheaderwrapper">
+          <div class="w-commerce-commercecheckoutcustomerinfosummarywrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4>Customer Information</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <div class="w-commerce-commercecheckoutrow">
+                <div class="w-commerce-commercecheckoutcolumn">
+                  <label class="w-commerce-commercecheckoutsummarylabel">Email</label>
+                  <div>{{ addressDetails?.email }}</div>
+                </div>
+                <div class="w-commerce-commercecheckoutcolumn">
+                  <label class="w-commerce-commercecheckoutsummarylabel">Shipping Address</label>
+                  <div>{{ addressDetails?.fullName }}</div>
+                  <div>{{ addressDetails?.streetAddress }}</div>
+                  <div>{{ addressDetails?.city }}, {{ addressDetails?.state }}</div>
+                  <div>{{ addressDetails?.zipCode }}</div>
+                  <div>{{ addressDetails?.country }}</div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="w-commerce-commercecheckoutpaymentsummarywrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4>Payment Info</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <div class="w-commerce-commercecheckoutrow">
+                <div class="w-commerce-commercecheckoutcolumn">
+                  <label class="w-commerce-commercecheckoutsummarylabel">Total Cost</label>
+                 
+                </div>
+                <div>₹ {{ orderDetails?.orderPrice }} INR</div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="w-commerce-commercecheckoutorderitemswrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4>Items in Order</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <div  role="list" class="w-commerce-commercecheckoutorderitemslist">
+                <div style="display: flex;
+                justify-content: space-around;" role="listitem" class="w-commerce-commercecheckoutorderitem" *ngFor="let item of cartItems">
+                  <div style="margin-right: 30px;">{{ item.orderName }}</div>
+                  <div style="margin-right: 30px;" class="small-text-2">Quantity: {{ item.orderQuantity }}</div>
+                  <div style="margin-right: 30px;" class="price">₹ {{ item.price }} INR</div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="w-commerce-commercecheckoutordersummarywrapper">
+            <div class="w-commerce-commercecheckoutsummaryblockheader">
+              <h4>Order Summary</h4>
+            </div>
+            <fieldset class="w-commerce-commercecheckoutblockcontent">
+              <div class="w-commerce-commercecheckoutsummarylineitem">
+                <div>Subtotal</div>
+                <div class="price">₹ {{ orderDetails?.orderPrice }} INR</div>
+              </div>
+              <div class="w-commerce-commercecheckoutsummarylineitem">
+                <div>Total</div>
+                <div class="w-commerce-commercecheckoutsummarytotal price">₹ {{ orderDetails?.orderPrice }} INR</div>
+              </div>
+            </fieldset>
+          </div>
+
+          <div (click)="continueShopping()" class="button">
+            <a (click)="continueShopping()" >Continue Shopping</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

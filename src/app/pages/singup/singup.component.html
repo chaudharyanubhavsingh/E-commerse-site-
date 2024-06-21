@@ -1,0 +1,29 @@
+<div class="background" >
+  <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form [formGroup]="form">
+        <h1>Create Account</h1>
+        <div class="social-container">
+          <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+          <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <span>or use your email for registration</span>
+        <input type="text" formControlName="username" placeholder="UserName"autocomplete="off" />
+        <input type="text" formControlName="address" placeholder="Address"autocomplete="off" />
+        <input type="email" formControlName="email" placeholder="Email" autocomplete="off" />
+        <input type="password" formControlName="password" placeholder="Password" autocomplete="off" />
+        <button (click)="signUp()">Sign Up</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your personal details and start journey with us</p>
+          <button  (click)="login()" >Login In</button>
+        </div>
+      </div>
+    </div>
+  </div>

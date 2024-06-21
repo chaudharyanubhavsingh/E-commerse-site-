@@ -1,0 +1,50 @@
+<div id="Products" class="content-section" style="padding-top:0px ;">
+  <div class="content-wrapper w-container">
+    <!-- Toolbar Section -->
+    <div class="toolbar-wrapper" style="margin-bottom: 61px;">
+      <!-- View As Section -->
+      <div class="toolbar-col toolbar-colLeft">
+        <label class="toolbar-label" style="    margin-bottom: 5px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;">View as</label>
+        <div class="toolbar-item toolbar-viewAs clearfix" data-view-as>
+          <!-- Angular bindings for grid views -->
+          <span *ngIf="showGridOption(1)" class="toolbar-icon" (click)="setGridColumns(1)" [class.active]="gridColumns === 1" role="button" tabindex="0">
+            <mat-icon aria-label="List View">view_list</mat-icon>
+          </span>
+          <span *ngIf="showGridOption(2)" class="toolbar-icon" (click)="setGridColumns(2)" [class.active]="gridColumns === 2" role="button" tabindex="0">
+            <mat-icon aria-label="Grid 2 View">dashboard</mat-icon>
+          </span>
+          <span *ngIf="showGridOption(3)" class="toolbar-icon" (click)="setGridColumns(3)" [class.active]="gridColumns === 3" role="button" tabindex="0">
+            <mat-icon aria-label="Grid 3 View">apps</mat-icon>
+          </span>
+          <span *ngIf="showGridOption(4)" class="toolbar-icon" (click)="setGridColumns(4)" [class.active]="gridColumns === 4" role="button" tabindex="0">
+            <mat-icon aria-label="Grid 4 View">apps</mat-icon>
+          </span>
+          <span *ngIf="showGridOption(5)" class="toolbar-icon" (click)="setGridColumns(5)" [class.active]="gridColumns === 5" role="button" tabindex="0">
+            <mat-icon aria-label="Grid 7 View">apps</mat-icon>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dress Cards Grid -->
+    <div class="w-dyn-list" style="display: flex; flex-wrap: wrap;">
+      <!-- Loop through dress data to generate cards -->
+      <div role="listitem" class="collection-item w-dyn-item" [style.flex]="'0 0 ' + (100 / gridColumns) + '%'" *ngFor="let dress of dresses">
+        <a [routerLink]="dress.link" class="relative w-inline-block">
+          <img alt="" [src]="dress.image" style="width: 100%; max-width: 100%; height: auto; display: block;" />
+        </a>
+        <div class="products-details" style="padding: 10px;">
+          <a [routerLink]="dress.link" class="link" style="font-size: 16px; font-weight: bold; display: block; margin-bottom: 10px;">{{dress.name}}</a>
+          <div style="font-size: 14px; margin-bottom: 10px;">{{dress.description}}</div>
+          <div>
+            <a [routerLink]="dress.link" class="price" style="font-size: 18px; color: #333; font-weight: bold;">{{dress.price}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
